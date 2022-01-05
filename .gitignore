@@ -6,3 +6,4 @@ src/Json.h
 src/Json.cpp
 src/Log.h
 src/Log.cpp
+src/Debug.h
