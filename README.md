@@ -64,7 +64,7 @@ void setup() {
     Serial.println("Firebase is ready");
 }
 ```
-### Realtime Database <a name="rtdb"></a>
+## Realtime Database <a name="rtdb"></a>
 Firebase Realtime Database API needs _database url_ to work. You can get the _database url_ from the Realtime Database tab in your Firebase console. The data of Realtime Database is represented as a `Json` object. You can read the documentation [here](https://github.com/wachidsusilo/Json).
 ```c++
 //The url should looks like this:
@@ -130,7 +130,7 @@ Please be aware that the `listen()` API is using _Server Sent Events_ technology
 Firebase.database(dbUrl).path("users/EX4MP73").listen(callback);
 ```
 
-### Firestore <a name="fs"></a>
+## Firestore <a name="fs"></a>
 The firestore API is more or less the same as Realtime Database. The main different is that the data is represented as a `Document` instead of a `Json` object. 
 
 #### 1. Create a document <a name="fs1"></a>
@@ -216,7 +216,7 @@ This library also comes with predefined function to send a simple notification t
 Firebase.sendAndroidNotification(Message::TOPIC, "topic-name", "Title", "I am body", "channelId");
 ```
 
-### Miscellaneous <a name="misc"></a>
+## Miscellaneous <a name="misc"></a>
 There is so much thing going on in the background in order to provide all of the convenient methods described above. This library is constantly renewing access token for roughly once every ten minutes in the background, so the access token would theoretically never be expired. The _Server Sent Events_ method is polled constantly, and would be automatically reconnected whenever the connection is dropped. There is also an NTP service running in the background, you can access it using the APIs below.
 
 #### 1. Set Timezone (Time Offset) <a name="misc1"></a>
